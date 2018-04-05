@@ -33,27 +33,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 .hero {
-  height: 90vh;
-  position: relative;
-  overflow: hidden;
-}
-.hero img {
-  position: relative;
-  z-index: 1;
+  min-height: 90vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ), url("/1000{{- .Params.image | default .Site.Params.heroImage -}}");
+  background-size: cover;
 }
 .hero-text {
-  position: absolute;
-  z-index: 9;
   color: white;
-  padding: 15px;
-  top: 30px;
-  left: 0px;
-  font-size: 1.2rem;
+  padding: 20% 15px;
+  font-size: 1rem;
   text-shadow: 0 4px 6px rgba(50, 50, 0, 0.11);
 }
 .hero h1 {
   color: #fff;
-  font-size: 3rem;
 }
 .hero .btn {
   text-transform: uppercase;

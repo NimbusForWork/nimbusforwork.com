@@ -1,126 +1,19 @@
 <!doctype html>
-<html amp lang="en">
+<html ⚡ lang="en" class="amp-border-box">
 <head>
-{{ partial "base/header.html" . }}
+{{ partial "base/header-amp.html" . }}
+{{ partial "base/styles-amp.html" . }}
 </head>
+<body class="">
 
-<body class="Home">
 {{ partial "base/main-nav.html" . }}
-<main>
-
-
-<div class="MainHero">
-  <section class="hero is-fullheight">
-    <div class="hero-body">
-
-    </div>
-  </section>
-</div>
-
-<section class="hero is-light is-medium">
-  <div class="hero-body">
-    <div class="columns has-text-centered">
-      <div class="column">
-        <h3 class="title is-3">Our Vision</h3>
-
-        <p>
-          Be the top choice cleaning company with a heart  <br><br>
-          <span class="icon has-text-danger is-large">
-            <i class="fas fa-3x fa-heart"></i>
-          </span>
-          <br>
-        </p>
-        <p>
-          for <strong class="is-uppercase">God</strong>, <br>
-          for <strong class="is-uppercase">People</strong>, <br>
-          for <strong class="is-uppercase">Business</strong>. <br>
-        </p>
-      </div>
-      <div class="column">
-        <h3 class="title is-3">Our Mission</h3>
-        <p>
-          <strong class="is-uppercase">Teamwork</strong> <br> Nothing is too difficult for us to achieve together, we will do our best for every project assigned to us.
-        </p>
-        <p>
-          <strong class="is-uppercase">Care</strong> <br>We do not take advantage of one another especially our workers.
-        </p>
-        <p>
-          <strong class="is-uppercase">Integrity</strong>  <br>We will adhere to God’s moral and ethical principles in everything we do.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-medium">
-  <div class="container hero-body has-text-centered">
-
-    <h3 class="title is-3">Our Services</h3>
-    <div class="content">
-      At Trust Cleanz Initiative, we believe in delivering an excellent cleaning service that is of consistent quality to our customers by carefully recruited, well-trained and highly motivated staff.
-    </div>
-    <div class="columns is-multiline">
-      <div class="column is-4">
-        <figure class="image is-64x64 is-centered">
-          <img src="/svg/oneoff-cleaning.svg">
-        </figure>
-        <h6 class="title is-6">One-off Cleaning</h6>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-64x64 is-centered">
-          <img src="/svg/floor-waxing.svg">
-        </figure>
-        <h6 class="title is-6">Floor Stripping and Waxing</h6>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-64x64 is-centered">
-          <img src="/svg/polishing.svg">
-        </figure>
-        <h6 class="title is-6">Marble Crystallization and Polishing</h6>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-64x64 is-centered">
-          <img src="/svg/floor-restoration.svg">
-        </figure>
-        <h6 class="title is-6">Restoration and Maintenance of Various Flooring types</h6>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-64x64 is-centered">
-          <img src="/svg/contract-cleaning.svg">
-        </figure>
-        <h6 class="title is-6">Contract Cleaning for Residential, Commercial and Industrial Building</h6>
-      </div>
-      <div class="column is-4">
-        <figure class="image is-64x64 is-centered">
-          <img src="/svg/carpet-cleaning.svg">
-        </figure>
-        <h6 class="title is-6">Carpet shampooing, Bonetting of Carpet and Carpet Hot Water extraction</h6>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero has-text-centered affilate-section is-light">
-  <div class="hero-body">
-      <img class=" is-centered" src="/svg/nimbus-logo.svg" style="width:200px; margin:10px auto;">
-      <p class="is-5">Affiliate partners of <a href="https://nimbusforwork.com"><strong>nimbusforwork.com</strong></a></p>
-  </div>
-</section>
-
-
+{{ partial "components/hero.html" . }}
+{{ partial "components/clients.html" . }}
+{{ partial "components/guarantee.html" . }}
+{{ partial "components/why-choose-us.html" . }}
+{{ partial "components/testimonials.html" . }}
+{{ partial "components/cta.html" . }}
 {{ partial "base/footer.html" . }}
 
-<script async>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-</main>
 </body>
 </html>
