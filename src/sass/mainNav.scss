@@ -1,0 +1,11 @@
+
+@import "./variables";
+
+.MainNav {
+  border-bottom: 2px solid $blue-grey-borders;
+
+  .navbar-item {
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+}

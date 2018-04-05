@@ -1,0 +1,41 @@
+
+@import "./variables";
+
+#form-invite {
+  margin-top: 40px;
+  .button {
+    font-family: $family-serif;
+    background: $red;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    word-spacing: .1em;
+    font-size: 13px;
+    line-height: 27px;
+    height: 36px;
+  }
+}
+#form-newsletter {
+  margin-top: 40px;
+  .button {
+    font-family: $family-serif;
+    border-color: $red;
+    color: $red;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    word-spacing: .1em;
+    font-size: 13px;
+    line-height: 27px;
+    height: 36px;
+    &:hover {
+      color: #fff;
+      background: $red;
+    }
+  }
+}
+
+.inverted-form {
+  input {
+    background: $red;
+    color: white;
+  }
+}

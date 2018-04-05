@@ -1,0 +1,60 @@
+baseurl = "https://nimbusforwork.com"
+title = "Nimbus for Work"
+# theme = "exaquark"
+languageCode = "en"
+
+
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
+
+[params]
+  # Date format
+  #dateFormat = "January 2, 2006"
+  SiteDescription = "Commercial Cleaning in Singapore."
+  GoogleTagManager = "GTM-KR9HD3W" # GTM !!! not Google googleAnalytics
+
+# This is displayer in About page.
+[params.social]
+  # twitter = "kiwicopple"
+  facebook = "https://www.facebook.com/nimbusforwork/"
+  # googleplus = "Googleplus username"
+  # instagram = "https://www.instagram.com/driffftofficial"
+  # tumblr = "Tumblr username"
+  # flickr = "Flickr username"
+  # reddit = "kiwicopple"
+  linkedin = "https://www.linkedin.com/company/13430028/"
+  # slideshare = "Slideshare username"
+  # github = "https://github.com/exaquark"
+  # gitlab = "Gitlab username"
+  # bitbucket = "Bitbucket username"
+  # stackoverflow = "kiwicopple"
+  # jsfiddle = "Jsfiddle username"
+  # codepen = "Codepen username"
+  # deviantart = "Deviantart username"
+  # behance = "Behance username"
+  # dribbble = "Dribbble username"
+  # wordpress = "Wordpress username"
+  # medium = "https://medium.com/exaquark/"
+  # foursquare = "Foursquare username"
+  # xing = "Xing username"
+  # quora = "Quora username"
+  # youtube = "Youtube username"
+  # vimeo = "Vimeo username"
+  # whatsapp = "Whatsapp username"
+  # skype = "Skype username"
+  # snapchat = "Snapchat username"
+  # pinterest = "Pinterest username"
+  # telegram = "Telegram username"
+  # vine = "Vine username"
+  # email = "Your email"
+
+
+# Footer Menu
+[[menu.footer]]
+  name = "About"
+  weight = 1
+  identifier = "about"
+  url = "/about/"

@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{- .Title | default .Site.Title -}}</title>
+<meta name="description" content="{{- .Params.blurb | default .Site.Params.SiteDescription -}}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<!-- Open Graph Protocol http://ogp.me/ -->
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{- .Title | default .Site.Title -}}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:description" content="{{- .Params.blurb | default .Site.Params.SiteDescription -}}">
+<meta property="og:image" content="{{ if .Params.image }}{{.Site.BaseURL}}1000{{.Params.image}}{{ else }}{{.Site.BaseURL}}logo-menu.svg{{ end }}">
+
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link href="/css/site.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,700" rel="stylesheet">
+
+<script src="/js/site.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+
+
+<!-- Preconnect API. For browser compatibility, check http://caniuse.com/#feat=link-rel-preconnect -->
+<link rel="preconnect" href="{{ .Site.BaseURL }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ range .AlternativeOutputFormats -}}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+{{ end -}}
+
+<!-- Add prefetch and prerender on section pages. Works especially well for articles or blog posts in a series -->
+{{ if .IsPage }}
+	{{if .NextInSection }}
+	<link rel="prefetch" href="{{.NextInSection.Permalink}}">
+	<link rel="prerender" href="{{.NextInSection.Permalink}}">
+	{{ end }}
+	{{if .PrevInSection }}
+	<link rel="prefetch" href="{{.PrevInSection.Permalink}}">
+	<link rel="prerender" href="{{.PrevInSection.Permalink}}">
+	{{ end }}
+{{ end }}
+
+
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ .Site.Params.GoogleTagManager }}');</script>
+  <!-- End Google Tag Manager -->

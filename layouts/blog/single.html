@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{{ partial "base/header.html" . }}
+
+</head>
+
+<body class="Showcase">
+{{ partial "base/main-nav.html" . }}
+<main>
+
+{{ $img := (printf "/1000%s" .Params.image) }}
+
+<div class="featuredImage" style="background-image:url('{{$img}}')"></div>
+<!-- <img src="{{$img}}" alt="{{.Title}}" class="featuredImage"> -->
+
+
+
+<div class="section">
+  <div class="container">
+
+    <div class=" columns is-centered">
+      <div class="Post column is-10">
+        <h3 class="PostTitle title is-3">{{.Title}}</h3>
+
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="is-active"><a href="{{.Permalink}}" aria-current="page">{{.Title}}</a></li>
+          </ul>
+        </nav>
+
+        <div class="content">
+          {{.Content}}
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+</main>
+{{ partial "components/cta.html" . }}
+{{ partial "base/footer.html" . }}
+</body>
+</html>

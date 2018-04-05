@@ -1,0 +1,22 @@
+{{- with .Site.Params.social }}
+  <div class="buttons has-addons">
+    {{- with .instagram }}
+      <a class="button" href="{{.}}"> <span class="icon is-small"><i class="fab fa-instagram"></i></span> </a>
+    {{- end }}
+    {{- with .twitter }}
+      <a class="button" href="{{.}}"> <span class="icon is-small"><i class="fas twitter"></i></span> </a>
+    {{- end }}
+    {{- with .facebook }}
+      <a class="button" href="{{.}}"> <span class="icon is-small"><i class="fab fa-facebook-f"></i></span> </a>
+    {{- end }}
+    {{- with .github }}
+      <a class="button" href="{{.}}"> <span class="icon is-small"><i class="fab fa-github"></i></span> </a>
+    {{- end }}
+    {{- with .linkedin }}
+      <a class="button" href="{{.}}"> <span class="icon is-small"><i class="fab fa-linkedin"></i></span> </a>
+    {{- end }}
+    {{- with .medium }}
+      <a class="button" href="{{.}}"> <span class="icon is-small"><i class="fab fa-medium"></i></span> </a>
+    {{- end }}
+  </div>
+{{- end }}

@@ -1,0 +1,17 @@
+
+@import "./variables";
+
+.footer {
+  border-top: 2px solid white;
+  color: white;
+  background: $blue;
+
+  .logo {
+    width: 50%;
+    margin-bottom: 30px;
+    display: block;
+  }
+  h4 {
+    margin: 10px 0;
+  }
+}

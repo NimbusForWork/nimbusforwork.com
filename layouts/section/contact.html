@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{{ partial "base/header.html" . }}
+
+</head>
+
+<body class="Contact">
+{{ partial "base/main-nav.html" . }}
+<main>
+
+  <section class="hero is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <img src="/logo-menu.svg" alt="{{.Site.Title}}" width="300" style="display:block;margin:50px auto;" />
+
+        <div class="columns is-centered ">
+          <div class="column is-6 content">
+
+            <h4>Request a quote</h4>
+            {{ partial "forms/contact-us.html" . }}
+
+          </div>
+          <!-- <div class="column content">
+              <h4>Address</h4>
+              <p>
+                <a href="http://maps.google.com/maps?f=q&hl=en&geocode=&q=33%20Ubi%20Avenue%203,%20(S)408868,%20Singapore,%20&zipcode=408868&addtohistory=&submit.x=0&submit.y=0" target="_blank">
+                  Trust Cleanz Initiative Pte Ltd
+                </a><br>
+                33 Ubi Avenue 3, #08-71 Vertex<br>
+                Singapore 408868 <br>
+              </p>
+
+
+              <h4>Call us for a quote</h4>
+              <p>
+                <strong>Office</strong> +65 6747 8779 <br>
+                <strong>Fax</strong> +65 6729 9728 <br>
+                <strong>Mobile</strong> +65 9362 0420 <br>
+                <a href="mailto:alextham@trustcleanz.sg">alextham@trustcleanz.sg</a>
+              </p>
+          </div> -->
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "base/footer.html" . }}
+
+
+
+
+</main>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+
+@import "./variables";
+
+.Home {
+
+  .MainHero {
+    position: relative;
+    z-index: 9;
+    margin-top: -50px;
+    padding-top: 50px;
+    background-image: url('/1000/images/bg-hero.jpg');
+    background-color: $blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .affilate-section {
+    border-top: 1px solid $blue-grey-borders;
+  }
+
+}

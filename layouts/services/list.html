@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{{ partial "base/header.html" . }}
+
+</head>
+
+<body class="ShowcaseList">
+{{ partial "base/main-nav.html" . }}
+<main>
+
+
+
+{{ range first 1 .Data.Pages }} <!-- featured post (weight 1) -->
+  {{ $img := (printf "/1000%s" .Params.image) }}
+  <section class="Featured section has-text-right">
+      <a class="container" style="background-image:url('{{ $img }}'"  href="{{.Permalink}}">
+        <div class="">
+          <h2 class="title">
+            {{.Title}}
+          </h2>
+        </div>
+        <button class="button is-rounded is-outlined is-white">
+          READ MORE
+        </button>
+      </a>
+  </section>
+{{ end }}
+
+
+
+<section class="section">
+  <div class="container">
+
+    <div class="columns is-multiline">
+
+
+    {{ range after 1 .Data.Pages }} <!-- skip the featured post -->
+
+      <div class="column is-half">
+        <a class="card" href="{{.Permalink}}">
+          <div class="card-image">
+            <figure class="image">
+              <img src="/rect{{.Params.image}}" alt="{{.Title}}">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-6">
+              {{.Title}}
+            </p>
+            <p class="summary">
+              {{.Params.description}}
+            </p>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+
+    </div>
+  </div>
+</section>
+
+<!-- <section>
+  about  - we are building a showcase. if you want to partner with us.... Add angled background(?)
+</section> -->
+
+
+
+</main>
+{{ partial "base/footer.html" . }}
+</body>
+</html>
