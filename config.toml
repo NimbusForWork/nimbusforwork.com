@@ -17,19 +17,19 @@ languageCode = "en"
   heroSubtitle = "We make office cleaning and office management hassle-free. Try us out by getting a free quote or call +6587874824"
   testimonials = [
     {
-      image = "/images/bg-hero.jpg",
+      image = "/images/jiahui.jpg",
       name = "Jiahui",
       position = "Operations Executive, Collision 8",
       testimonial = "“The Nimbus team are always on the lookout for suggestions to better fit our needs. They have been very involved in our operations from Day 1, always ensuring we have a good cleaning team on duty.. glad to have Nimbus working alongside the team!”"
     },
     {
-      image = "/images/bg-hero.jpg",
+      image = "/images/eames.jpg",
       name = "Eames",
       position = "Assistant Manager, Hyflux",
       testimonial = "“Daniel always come to my rescue whenever I’m requesting for an urgent help in cleaning services due to various VIPS events… It’s an honor getting to work closely with Daniel for his great leadership in management and a very promising self that he will ensure the task allocated would be settled at a very satisfactory level.”"
     },
     {
-      image = "/images/bg-hero.jpg",
+      image = "/images/ian.jpg",
       name = "Ian",
       position = "Head of Real Estate, Impact Hub SG",
       testimonial = "“We engaged Nimbus for our quarterly carpet cleaning and upholstery services. We were impressed by their professionalism and quality equipment! Would definitely recommend.”"
