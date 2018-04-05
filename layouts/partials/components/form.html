@@ -1,18 +1,27 @@
-<form class="" action="#" target="_top" >
+<form class="" action-xhr="https://formspree.io/dan@nimbusforwork.com" target="_top" method="POST">
+  <input type="hidden" name="_cc" value="pcopplestone@gmail.com" />
+  <input type="text" name="_gotcha"class="gotcha" />
+
   <div class="form-group">
     <!-- <label class="form-label" for="input-Name">Name</label> -->
-    <input class="form-input" type="text" id="input-Name" placeholder="Your Name">
+    <input name="Name" class="form-input" type="text" id="input-Name" placeholder="Your Name *" required>
   </div>
   <div class="form-group">
     <!-- <label class="form-label" for="input-Email">Email</label> -->
-    <input class="form-input" type="text" id="input-Email" placeholder="Your email">
+    <input name="Email" class="form-input" type="text" id="input-Email" placeholder="Your email *" required>
   </div>
   <div class="form-group">
     <!-- <label class="form-label" for="input-Handphone">Handphone</label> -->
-    <input class="form-input" type="text" id="input-Handphone" placeholder="Your handphone">
+    <input name="Handphone" class="form-input" type="text" id="input-Handphone" placeholder="Your handphone *" required>
   </div>
   <div class="form-group">
-    <textarea class="form-input" id="input-example-3" placeholder="Tell us what you need" rows="3"></textarea>
+    <textarea name="Message" class="form-input" id="input-example-3" placeholder="Tell us what you need" rows="3"></textarea>
   </div>
-  <button class="btn btn-primary">Send</button>
+  <input type="submit" class="btn btn-primary" value="Send">
+  <div submit-success>
+    Thanks for your message, we'll get back to you as soon as possible.
+  </div>
+  <div submit-error>
+    There was an error. Would you mind trying again?
+  </div>
 </form>
