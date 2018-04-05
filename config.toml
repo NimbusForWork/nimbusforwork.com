@@ -11,7 +11,7 @@ languageCode = "en"
   # Date format
   #dateFormat = "January 2, 2006"
   SiteDescription = "Commercial Cleaning in Singapore."
-  GoogleTagManager = "GTM-KR9HD3W" # GTM !!! not Google googleAnalytics
+  googleTagManager = "GTM-5MN4WXN" # GTM !!! not Google googleAnalytics
   heroImage = "/images/bg-hero.jpg"
   heroTitle = "Experience World-Class Cleaning In Singapore Or The Next One is On Us."
   heroSubtitle = "We make office cleaning and office management hassle-free. Try us out by getting a free quote or call +6587874824"
