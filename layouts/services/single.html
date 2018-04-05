@@ -15,7 +15,7 @@
       </a>
     </section>
     <section class="navbar-section">
-      <button class="btn btn-nimbus input-group-btn">Contact Us</button>
+      <a class="btn btn-nimbus input-group-btn" href="/contact">Contact Us</a>
     </section>
   </header>
 </div>
@@ -25,10 +25,34 @@
     <amp-img src="/rect/images/bg-hero.jpg" alt="Nimbus" class="img-fit-cover" width="300" height="200" layout=responsive>
 
     <div class="hero-text col-7 col-sm-12">
-      <h1>Eliminate Stains and Prolong Your Carpet’s Lifespan</h1>
-      <p>Nimbus provides total dirt and bacterial removal with our office carpet care package.</p>
-      <button class="btn btn-nimbus">Request a free quote</button>
+      <h1>{{.Params.description}}</h1>
+      <p>{{.Params.subheading}}</p>
+      <a class="btn btn-nimbus" href="/contact">Request a free quote</a>
     </div>
+</div>
+
+
+<div class="section ">
+  <div class="container grid-sm text-center">
+    <h1>What You Can Expect</h1>
+    <div class="separator"></div>
+  </div>
+  <div class="container grid-xl">
+    <div class="columns">
+
+      {{ range .Params.reasons }}
+      <div class="column reason col-4 col-md-12">
+        <div class="icon">
+          <amp-img src="{{.icon}}" alt="{{.heading}}" class="" height="50" width="50"/>
+        </div>
+        <h3>{{.heading}}</h3>
+        <p>{{.reason}}</p>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+
 </div>
 
 
@@ -111,38 +135,6 @@
   </div>
 </div>
 
-<div class="section ">
-  <div class="container grid-sm text-center">
-    <h1>What You Can Expect</h1>
-    <div class="separator"></div>
-  </div>
-  <div class="container grid-xl">
-    <div class="columns">
-      <div class="column reason col-4 col-md-12">
-        <div class="icon">
-          <amp-img src="/svg/smartphone.png" alt="Nimbus Clients" class="" height="50" width="50"/>
-        </div>
-        <h3>Your Carpet Color Restored with No More Dirt.</h3>
-        <p>Keep your office shiny and free of unhygienic residues left by dust mites in the carpet pile.We use deep water extraction machinery to cut off all the top layer of dirty carpet fur and more importantly, through the extraction process, eliminate all the germs, dirt and dust deep down in your carpet.</p>
-      </div>
-      <div class="column reason col-4 col-md-12">
-        <div class="">
-          <amp-img src="/svg/smartphone.png" alt="Nimbus Clients" class="" height="50" width="50"/>
-        </div>
-        <h3>A Prolonged Carpet Lifespan</h3>
-        <p>An average carpet lifespan ranges from 2 to 5 years  depending if your floor convering is a Woven, Needlefelt or a Knotted pile. Regular carpet care every 6 to 12 months can substantially prolong your office carpet’s lifespan.</p>
-      </div>
-      <div class="column reason col-4 col-md-12">
-        <div class="">
-          <amp-img src="/svg/smartphone.png" alt="Nimbus Clients" class="" height="50" width="50"/>
-        </div>
-        <h3>Satisfaction Guaranteed or The Next One Is On Us</h3>
-        <p>At Nimbus, we don't just pay lip service to quality, we walk the talk. if you are dissatisfied with our carpet cleaning after the service, we will do a complimentary cleaning for you free of charge with no questions asked.</p>
-      </div>
-    </div>
-  </div>
-
-</div>
 
 
 
@@ -152,35 +144,22 @@
     <div class="separator"></div>
     <div class="columns">
 
-      <div class="column col-sm-12">
-        <div class="card">
-          <div class="card-image">
-            <amp-img src="/square/images/bg-hero.jpg" class="circle" width="100" height="100" >
-          </div>
-          <div class="card-header">
-            <div class="card-title h5">Ian</div>
-            <div class="card-subtitle">Head of Real Estate, Impact Hub SG</div>
-          </div>
-          <div class="card-body">
-            “We engaged Nimbus for our quarterly spring cleaning services. We were impressed by their professionalism and quality equipment! Would definitely recommend.”
-          </div>
-        </div>
-      </div>
-
-      <div class="column col-sm-12">
-        <div class="card">
-          <div class="card-image">
-            <amp-img src="/square/images/bg-hero.jpg" class="circle" width="100" height="100" >
-          </div>
-          <div class="card-header">
-            <div class="card-title h5">Eames</div>
-            <div class="card-subtitle">Assistant Manager, Hyflux</div>
-          </div>
-          <div class="card-body">
-            "Daniel always come to my rescue whenever I’m requesting for an urgent help in spring cleaning services due to various VIP events"
+      {{ range .Params.testimonials }}
+        <div class="column col-sm-12">
+          <div class="card">
+            <div class="card-image">
+              <amp-img src="/square{{.image}}" alt="{{.name}}" class="circle" width="100" height="100" >
+            </div>
+            <div class="card-header">
+              <div class="card-title h5">{{.name}}</div>
+              <div class="card-subtitle">{{.position}}</div>
+            </div>
+            <div class="card-body">
+              {{.testimonial}}
+            </div>
           </div>
         </div>
-      </div>
+      {{ end }}
 
     </div>
   </div>
