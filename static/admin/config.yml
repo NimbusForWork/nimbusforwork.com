@@ -1,6 +1,8 @@
+# backend:
+#   name: github
+#   repo: NimbusForWork/nimbusforwork.com # Path to your Github repository
 backend:
-  name: github
-  repo: NimbusForWork/nimbusforwork.com # Path to your Github repository
+  name: git-gateway
 
 media_folder: "/static/images" # Folder where user uploaded files should go
 public_folder: "/images" # removing path for media - we will decide the path based on the size we need
@@ -12,10 +14,10 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/services" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Service", name: "title", widget: "string"}
-      - {label: "Heading", name: "description", widget: "text"}
-      - {label: "Subheading", name: "subheading", widget: "text"}
-      - {label: "Hero Image", name: "image", widget: "image", required: true}
+      - {label: "Service", name: "title", widget: "string", required: true}
+      - {label: "Heading", name: "description", widget: "text", required: true}
+      - {label: "Subheading", name: "subheading", widget: "text", required: true}
+      - {label: "Hero Image", name: "image", widget: "image"}
       - label: "Reasons"
         name: "reasons"
         widget: "list"
