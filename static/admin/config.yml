@@ -16,4 +16,18 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Heading", name: "description", widget: "text"}
       - {label: "Subheading", name: "subheading", widget: "text"}
       - {label: "Hero Image", name: "image", widget: "image", required: true}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Reasons"
+        name: "reasons"
+        widget: "list"
+        fields:
+          - {label: "Icon", name: "icon", widget: "image"}
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Reason", name: "reason", widget: "text"}
+      - label: "Testimonials"
+        name: "testimonials"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Position", name: "position", widget: "string"}
+          - {label: "Testimonial", name: "testimonial", widget: "string"}
