@@ -17,7 +17,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Service", name: "title", widget: "string", required: true}
       - {label: "Heading", name: "description", widget: "text", required: true}
       - {label: "Subheading", name: "subheading", widget: "text", required: true}
-      - {label: "Hero Image", name: "image", widget: "image"}
+      - {label: "Hero Image", name: "image", widget: "image", required: false}
       - label: "Reasons"
         name: "reasons"
         widget: "list"
