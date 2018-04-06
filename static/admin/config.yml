@@ -9,6 +9,7 @@ public_folder: "/images" # removing path for media - we will decide the path bas
 collections: # A list of collections the CMS should be able to edit
   - name: "services"
     label: "Services"
+    folder: "content/services" # The path to the folder where the documents are stored
     fields: # The fields each document in this collection have
       - {label: "Service", name: "title", widget: "string"}
       - {label: "Heading", name: "description", widget: "text"}
