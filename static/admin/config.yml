@@ -21,6 +21,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Reasons"
         name: "reasons"
         widget: "list"
+        required: false
         fields:
           - {label: "Icon", name: "icon", widget: "image"}
           - {label: "Heading", name: "heading", widget: "string"}
@@ -28,6 +29,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Testimonials"
         name: "testimonials"
         widget: "list"
+        required: false
         fields:
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Name", name: "name", widget: "string"}
