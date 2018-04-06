@@ -9,14 +9,14 @@ public_folder: "/images" # removing path for media - we will decide the path bas
 
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "services"
-    label: "Services"
+  - name: "service"
+    label: "Service"
     folder: "content/services" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Service *", name: "title", widget: "string", required: true}
-      - {label: "Heading", name: "description", widget: "text", required: true}
-      - {label: "Subheading", name: "subheading", widget: "text", required: true}
+      - {label: "Service Name *", name: "title", widget: "string", required: true}
+      - {label: "Hero Heading", name: "description", widget: "text", required: true}
+      - {label: "Hero Subheading", name: "subheading", widget: "text", required: true}
       - {label: "Hero Image", name: "image", widget: "image", required: false}
       - label: "Reasons"
         name: "reasons"
@@ -35,3 +35,11 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Name", name: "name", widget: "string"}
           - {label: "Position", name: "position", widget: "string"}
           - {label: "Testimonial", name: "testimonial", widget: "string"}
+  - name: "author"
+    label: "Author"
+    folder: "internal/authors" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Name *", name: "title", widget: "string", required: true}
+      - {label: "Blurb *", name: "description", widget: "text", required: true}
+      - {label: Image", name: "image", widget: "image", required: false}
