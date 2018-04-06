@@ -1,0 +1,26 @@
+---
+title: Upholstery Cleaning
+description: Restore Your Upholstery Back to Their Original Colours
+subheading: >-
+  Nimbus provides total stains and and bacterial removal solution with our
+  office upholstery cleaning package.
+image: /images/bg-hero.jpg
+reasons:
+  - heading: Your Furniture Stains Removed and Colour Restored
+    icon: /images/eames.jpg
+    reason: >-
+      We power-wash your furnitures using high-pressure water extraction and
+      professional machines to penetrate your fabric to eliminate coffee stains,
+      dirt, dust-mites and other harmful germs and bacteria. Our extraction
+      device then immediately extracts the water leaving your fabric washed and
+      fast-dry.
+testimonials:
+  - image: /images/ian.jpg
+    name: Ian
+    position: 'Head of Real Estate, Impact Hub SG'
+    testimonial: >-
+      “We engaged Nimbus for our quarterly spring cleaning services. We were
+      impressed by their professionalism and quality equipment! Would definitely
+      recommend.”
+---
+
