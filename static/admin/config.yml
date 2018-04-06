@@ -23,7 +23,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: "list"
         required: false
         fields:
-          - {label: "Icon", name: "icon", widget: "image"}
+          - {label: "Icon (50x50)", name: "icon", widget: "image"}
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Reason", name: "reason", widget: "text"}
       - label: "Custom Testimonials (leave empty to show default testimonials)"
