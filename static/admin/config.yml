@@ -14,7 +14,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/services" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Service", name: "title", widget: "string", required: true}
+      - {label: "Service *", name: "title", widget: "string", required: true}
       - {label: "Heading", name: "description", widget: "text", required: true}
       - {label: "Subheading", name: "subheading", widget: "text", required: true}
       - {label: "Hero Image", name: "image", widget: "image", required: false}
@@ -26,7 +26,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Icon", name: "icon", widget: "image"}
           - {label: "Heading", name: "heading", widget: "string"}
           - {label: "Reason", name: "reason", widget: "text"}
-      - label: "Testimonials"
+      - label: "Custom Testimonials (leave empty to show default testimonials)"
         name: "testimonials"
         widget: "list"
         required: false
