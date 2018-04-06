@@ -1,12 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: /NimbusForWork/nimbusforwork.com # Path to your Github repository
 
 media_folder: "/static/images" # Folder where user uploaded files should go
 public_folder: "/images" # removing path for media - we will decide the path based on the size we need
 
-backend:
-  name: github
-  repo: /NimbusForWork/nimbusforwork.com # Path to your Github repository
 
 collections: # A list of collections the CMS should be able to edit
   - name: "services"
