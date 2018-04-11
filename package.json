@@ -1,10 +1,12 @@
 {
-  "name": "exaquark-hugo",
+  "name": "kade-hugo-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/gulp",
+    "start:lambda": "netlify-lambda serve src/lambda",
+    "build:lambda": "netlify-lambda build src/lambda",
     "images": "node ./optimiseImages.js",
     "commit": "git add . && git commit"
   },

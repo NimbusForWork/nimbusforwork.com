@@ -1,2 +1,7 @@
+[build]
+  Command = "netlify-lambda build src/lambda && npm run images && hugo"
+  Functions = "lambda"
+  Publish = "public"
+
 [context.production.environment]
   HUGO_VERSION = "0.33"
