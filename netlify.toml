@@ -1,6 +1,5 @@
 [build]
   Command = "npm run build:functions && npm run images && hugo"
-  Functions = "lambda"
   Publish = "public"
 
 [context.production.environment]
