@@ -1,4 +1,3 @@
-require('dotenv').config()
 var Multipart = require('lambda-multipart')
 
 export function handler (event, context, callback){
