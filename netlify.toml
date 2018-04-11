@@ -1,5 +1,5 @@
 [build]
-  Command = "netlify-lambda build src/lambda && npm run images && hugo"
+  Command = "npm run build:functions && npm run images && hugo"
   Functions = "lambda"
   Publish = "public"
 

@@ -1,4 +1,9 @@
-<form class="" action-xhr="/.netlify/functions/form" target="_top" method="POST">
+
+{{ if eq (getenv "HUGO_ENV") "production" }}
+    <form class="" action-xhr="/.netlify/functions/form" target="_top" method="POST">
+{{else}}
+    <form class="" action-xhr="http://localhost:9000/form" target="_top" method="POST">
+{{ end }}
   <input type="hidden" name="_cc" value="pcopplestone@gmail.com" />
   <input type="text" name="_gotcha"class="gotcha" />
 
@@ -12,7 +17,7 @@
   </div>
   <div class="form-group">
     <!-- <label class="form-label" for="input-Handphone">Handphone</label> -->
-    <input name="Handphone" class="form-input" type="text" id="input-Handphone" placeholder="Your handphone *" required>
+    <input name="Phone" class="form-input" type="text" id="input-Phone" placeholder="Your handphone *" required>
   </div>
   <div class="form-group">
     <textarea name="Message" class="form-input" id="input-example-3" placeholder="Tell us what you need" rows="3"></textarea>
