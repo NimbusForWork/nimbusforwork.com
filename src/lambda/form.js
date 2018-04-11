@@ -84,6 +84,7 @@ var sendToEmail = (name, email, phone, message) => {
 }
 
 exports.handler = function(event, context, callback){
+  console.log('called', event)
   var origin = event["headers"]["origin"]
   var amp_source = event["queryStringParameters"]["__amp_source_origin"]
   var parser = new Multipart(event)
