@@ -2,22 +2,31 @@
 <div class="footer">
   <div class="section container grid-xl">
     <div class="columns">
-      <div class="column col-5 col-sm-12 col-mr-auto">
+      <div class="column col-5 col-sm-12 col-mx-auto">
         <figure class="figure">
           <amp-img src="/nimbus-inverted.png" alt="{{.Site.Title}}" class="img-responsive" height="50" width="130"/>
         </figure>
         <p>Nimbus provides quality cleaning and maintenance service and on-demand services from office cleaning to temporary labour. All our cleaners are full-time, trained, and WSQ certified.</p>
       </div>
-      <div class="column col-3 col-sm-12">
+      <div class="column col-2 col-sm-12">
         <h5>Important Links</h5>
         <ul>
           <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/contact-us/">Contact Us</a></li>
           <li><a href="https://blog.nimbusforwork.com/">Blog</a></li>
           <li><a href="https://careers.nimbusforwork.com/">Careers</a></li>
           <li><a href="https://careers.nimbusforwork.com/calculator/">Salary Calculator</a></li>
         </ul>
       </div>
-      <div class="column col-3 col-sm-12">
+      <div class="column col-2 col-sm-12">
+        <h5>Services</h5>
+        <ul>
+          {{ range where .Site.RegularPages "Type" "services" }}
+            <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="column col-2 col-sm-12">
         <h5>Get In Touch</h5>
         <ul>
           <li><a href="/contact">Request a free quote</a></li>
@@ -33,7 +42,7 @@
       </div>
     </div>
 
-    <div class="container text-center">
+    <div class="container">
       <small><a href="/files/terms-of-use.pdf">Terms</a> | <a href="/files/privacy-policy.pdf">Privacy</a> | © Nimbus For Work</small>
     </div>
   </div>

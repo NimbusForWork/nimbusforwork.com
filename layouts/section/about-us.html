@@ -1,0 +1,45 @@
+<!doctype html>
+<html ⚡ lang="en" class="amp-border-box">
+<head>
+{{ partial "base/header-amp.html" . }}
+{{ partial "base/styles-amp.html" . }}
+</head>
+<body class="">
+
+{{ partial "base/main-nav.html" . }}
+
+<div class="hero">
+  <div class="hero-text text-center col-6 col-lg-12 col-mx-auto">
+    <h1>Our Story</h1>
+    <p>Making The World a Better Place - One Clean Space at a Time</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container grid-lg">
+    <div class="columns">
+      <div class="column  col-6 col-sm-12">
+        {{ .Content }}
+      </div>
+      <div class="column text-center col-4 col-sm-12 col-mx-auto">
+        <h1 class="">Press Coverage</h1>
+        <div class="">
+          <amp-img src="/template-images/mothership.png" alt="Mothership" class="img-responsive" height="150" width="400" layout=responsive>
+        </div>
+        <div class="">
+          <amp-img src="/template-images/straits-times.png" alt="Mothership" class="img-responsive" height="150" width="400" layout=responsive>
+        </div>
+        <div class="">
+          <amp-img src="/template-images/zaobao.png" alt="Mothership" class="img-responsive" height="150" width="400" layout=responsive>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "components/core-values.html" . }}
+{{ partial "components/cta.html" . }}
+{{ partial "base/footer.html" . }}
+
+</body>
+</html>
