@@ -16,7 +16,7 @@
 {{ partial "base/footer.html" . }}
 
 <div id="myDiv">
-
+this is where it will appear
 </div>
 
 <script type="text/javascript">
@@ -40,6 +40,7 @@ function loadXMLDoc() {
     xmlhttp.open("GET", "/.netlify/functions/hello", true);
     xmlhttp.send();
 }
+loadXMLDoc()
 </script>
 
 </body>
