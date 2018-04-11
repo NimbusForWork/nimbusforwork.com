@@ -6,3 +6,11 @@
 [context.production.environment]
   HUGO_VERSION = "0.33"
   HUGO_ENV = "production"
+
+[[headers]]
+ for = "/*"
+ [headers.values]
+   Link = '''
+   </1000/images/bg-hero.jpg>; rel=preload; as=image, \
+   </logo-menu.png>; rel=preload; as=image, \
+   </favicon.png>; rel=preload; as=font'''
