@@ -1,6 +1,6 @@
 
 {{ if eq (getenv "HUGO_ENV") "production" }}
-    <form class="" action-xhr="/.netlify/functions/form" target="_top" method="POST">
+    <form class="" action-xhr="/.netlify/functions/form-multipart-test" target="_top" method="POST">
 {{else}}
     <form class="" action-xhr="http://localhost:9000/form" target="_top" method="POST">
 {{ end }}
