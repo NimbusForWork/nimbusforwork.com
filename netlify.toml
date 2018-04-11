@@ -12,5 +12,8 @@
  [headers.values]
    Link = '''
    </1000/images/bg-hero.jpg>; rel=preload; as=image, \
-   </logo-menu.png>; rel=preload; as=image, \
+   </logo-menu.svg>; rel=preload; as=image, \
+   </nimbus-inverted.png>; rel=preload; as=image, \
+   </svg/facebook-logo.svg>; rel=preload; as=image, \
+   </svg/linkedin-logo.svg>; rel=preload; as=image, \
    </favicon.png>; rel=preload; as=font'''
