@@ -16,4 +16,15 @@
    </nimbus-inverted.png>; rel=preload; as=image, \
    </svg/facebook-logo.svg>; rel=preload; as=image, \
    </svg/linkedin-logo.svg>; rel=preload; as=image, \
-   </favicon.png>; rel=preload; as=font'''
+   </favicon.png>; rel=preload; as=image \
+   '''
+ for = "/about-us"
+ [headers.values]
+   Link = '''
+   </1000/images/about-us-bg.jpg>; rel=preload; as=image \
+   '''
+ for = "/contact-us"
+ [headers.values]
+   Link = '''
+   </1000/images/nimbus-team3.jpg>; rel=preload; as=image \
+   '''
