@@ -11,7 +11,6 @@ const MAILGUN_API_KEY = process.env.MAILGUN_API_KEY
 var MAILGUN_API_DOMAIN = process.env.MAILGUN_API_DOMAIN
 var EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT
 
-
 var sendToSlack = (name, email, phone, message) => {
   let fields = [
     {
@@ -83,7 +82,7 @@ var sendToEmail = (name, email, phone, message) => {
   })
 }
 
-exports.handler = function(event, context, callback){
+export function handler (event, context, callback){
   console.log('called', event)
   var origin = event["headers"]["origin"]
   var amp_source = event["queryStringParameters"]["__amp_source_origin"]
