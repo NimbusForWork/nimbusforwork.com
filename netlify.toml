@@ -1,6 +1,6 @@
 [build]
-  Command = "npm run build:functions && npm run images && hugo"
-  Functions = ".netlify/functions"
+  Command = "npm run images && hugo && npm run build:functions"
+  functions = "public/.netlify/functions/"
   Publish = "public"
 
 [context.production.environment]
