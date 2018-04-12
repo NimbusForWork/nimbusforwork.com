@@ -9,7 +9,7 @@ languageCode = "en"
 [params]
   # Date format
   #dateFormat = "January 2, 2006"
-  SiteDescription = "Commercial Cleaning in Singapore."
+  SiteDescription = "Commercial Cleaning in Singapore"
   googleTagManager = "GTM-5MN4WXN" # GTM !!! not Google googleAnalytics
   heroImage = "/images/bg-hero.jpg"
   heroTitle = "Experience World-Class Cleaning In Singapore Or The Next One is On Us."
