@@ -30,7 +30,10 @@
 <!-- Open Graph Protocol http://ogp.me/ -->
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="{{- .Title | default .Site.Title -}}">
-<meta property="og:type" content="LocalBusiness">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:description" content="{{- .Params.blurb | default .Site.Params.SiteDescription -}}">
 <meta property="og:image" content="{{ if .Params.image }}{{.Site.BaseURL}}1000{{.Params.image}}{{ else }}{{.Site.BaseURL}}/template-images/bg-hero.jpg{{ end }}">
+
+<meta property="fb:app_id" content="{{ .Site.Params.ogFbAppId }}">
