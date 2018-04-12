@@ -14,10 +14,10 @@
   {
     "@context": "http://schema.org",
     "@type": "LocalBusiness",
-    "name": "Nimbus for Work",
+    "name": "{{ .Site.Title }}",
     "address": "970 Toa Payoh North #06-21 Singapore 318992",
     "logo": "{{ .Site.BaseURL }}/logo-nimbus.svg",
-    "image": "{{ if .Params.image }}{{.Site.BaseURL}}1000{{.Params.image}}{{ else }}{{.Site.BaseURL}}/logo-menu.svg{{ end }}",
+    "image": "{{ if .Params.image }}{{.Site.BaseURL}}1000{{.Params.image}}{{ else }}{{.Site.BaseURL}}/template-images/bg-hero.jpg{{ end }}",
     "url": "{{ .Permalink }}",
     "telephone": "+6587874828"
   }
@@ -30,6 +30,7 @@
 <!-- Open Graph Protocol http://ogp.me/ -->
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="{{- .Title | default .Site.Title -}}">
+<meta property="og:type" content="LocalBusiness">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:description" content="{{- .Params.blurb | default .Site.Params.SiteDescription -}}">
-<meta property="og:image" content="{{ if .Params.image }}{{.Site.BaseURL}}1000{{.Params.image}}{{ else }}{{.Site.BaseURL}}/logo-menu.svg{{ end }}">
+<meta property="og:image" content="{{ if .Params.image }}{{.Site.BaseURL}}1000{{.Params.image}}{{ else }}{{.Site.BaseURL}}/template-images/bg-hero.jpg{{ end }}">

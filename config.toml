@@ -1,6 +1,5 @@
 baseurl = "https://nimbusforwork.com"
 title = "Nimbus for Work"
-# theme = "exaquark"
 languageCode = "en"
 
 [taxonomies]
