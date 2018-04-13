@@ -11,12 +11,21 @@
  for = "/*"
  [headers.values]
    Link = '''
-   </1000/images/bg-hero.jpg>; rel=preload; as=image, \
+   </1000/images/bg-hero.jpg>; rel=preload; as=image, \https://nimbusforwork.com
    </logo-menu.svg>; rel=preload; as=image, \
    </nimbus-inverted.png>; rel=preload; as=image, \
    </svg/facebook-logo.svg>; rel=preload; as=image, \
    </svg/linkedin-logo.svg>; rel=preload; as=image, \
    </favicon.png>; rel=preload; as=image \
+   '''
+
+[[headers]]
+ for = "/"
+ [headers.values]
+   Link = '''
+   </template-images/support.jpg>; rel=preload; as=image, \
+   </svg/roller-brush.svg>; rel=preload; as=image, \
+   </svg/air-conditioner.svg>; rel=preload; as=image, \
    '''
 
 [[headers]]
