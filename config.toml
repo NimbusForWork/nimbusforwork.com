@@ -1,6 +1,7 @@
 baseurl = "https://nimbusforwork.com"
 title = "Nimbus for Work"
 languageCode = "en"
+enableRobotsTXT = true
 
 [taxonomies]
    tag = "tags"
