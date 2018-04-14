@@ -11,7 +11,7 @@
  for = "/*"
  [headers.values]
    Link = '''
-   </1000/images/bg-hero.jpg>; rel=preload; as=image, \https://nimbusforwork.com
+   </1000/images/bg-hero.jpg>; rel=preload; as=image, \
    </logo-menu.svg>; rel=preload; as=image, \
    </nimbus-inverted.png>; rel=preload; as=image, \
    </svg/facebook-logo.svg>; rel=preload; as=image, \
