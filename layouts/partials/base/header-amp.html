@@ -6,7 +6,10 @@
 
 <title>{{- .Title | default .Site.Title -}}</title>
 <meta name="description" content="{{- .Params.blurb | default .Site.Params.SiteDescription -}}">
-<link rel="canonical" href="{{ .Permalink }}">
+
+<link rel="amphtml" href="https://amp.nimbusforwork.com{{ (.Permalink | relURL) }}">
+<link rel="canonical" href=".Permalink">
+
 <link rel="preconnect" href="{{ .Site.BaseURL }}">
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 
