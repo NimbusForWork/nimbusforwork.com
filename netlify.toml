@@ -11,10 +11,6 @@
   for = "/*"
   [headers.values]
     Link = [
-      "</js/amp-v0.js>; rel=preload; as=script",
-      "</js/amp-form-0.1.js>; rel=preload; as=script",
-      "</js/amp-analytics-0.1.js>; rel=preload; as=script",
-      "</js/webfont.js>; rel=preload; as=script",
       "</1000/images/bg-hero.jpg>; rel=preload; as=image",
       "</logo-menu.svg>; rel=preload; as=image",
       "</nimbus-inverted.png>; rel=preload; as=image",
@@ -27,10 +23,12 @@
  for = "/"
  [headers.values]
    Link = [
-   "</js/amp-v0.js>; rel=preload; as=script",
-   "</js/amp-form-0.1.js>; rel=preload; as=script",
-   "</js/amp-analytics-0.1.js>; rel=preload; as=script",
-   "</js/webfont.js>; rel=preload; as=script",
+   "</1000/images/bg-hero.jpg>; rel=preload; as=image",
+   "</logo-menu.svg>; rel=preload; as=image",
+   "</nimbus-inverted.png>; rel=preload; as=image",
+   "</svg/facebook-logo.svg>; rel=preload; as=image",
+   "</svg/linkedin-logo.svg>; rel=preload; as=image",
+   "</favicon.png>; rel=preload; as=image"
    "</template-images/support.jpg>; rel=preload; as=image",
    "</svg/roller-brush.svg>; rel=preload; as=image",
    "</svg/air-conditioner.svg>; rel=preload; as=image"
