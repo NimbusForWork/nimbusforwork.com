@@ -1,0 +1,46 @@
+<!doctype html>
+<html ⚡ lang="en" class="amp-border-box">
+<head>
+{{ partial "base/header-amp.html" . }}
+{{ partial "base/styles-amp.html" . }}
+</head>
+<body class="">
+
+{{ partial "base/main-nav.html" . }}
+
+<div class="container  ">
+<div class="columns  ">
+
+  {{ range .Data.Pages }}
+  <div class="column col-4 ">
+  {{ partial "components/service-card.html" . }}
+    <!-- <a class="card" href="{{.Permalink}}">
+      <div class="card-image">
+        <figure class="image">
+          <img src="/rect{{.Params.image}}" alt="{{.Title}}">
+        </figure>
+      </div>
+      <div class="card-content">
+        <p class="title is-6">
+          {{.Title}}
+        </p>
+        <p class="summary">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </a> -->
+  </div>
+  {{ end }}
+
+</div>
+</div>
+{{ partial "components/clients.html" . }}
+{{ partial "components/testimonials.html" . }}
+
+
+{{ partial "components/cta.html" . }}
+{{ partial "base/footer.html" . }}
+
+
+</body>
+</html>
