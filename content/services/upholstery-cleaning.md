@@ -5,6 +5,7 @@ subheading: >-
   Nimbus provides total stains and and bacterial removal solution with our
   office upholstery cleaning package.
 image: /images/bg-hero.jpg
+caption: Book an ad-hock cleaner
 reasons:
   - heading: Your Furniture Stains Removed and Colour Restored
     icon: /images/eames.jpg
@@ -23,4 +24,3 @@ testimonials:
       impressed by their professionalism and quality equipment! Would definitely
       recommend.”
 ---
-

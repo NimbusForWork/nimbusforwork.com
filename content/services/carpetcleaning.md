@@ -3,6 +3,7 @@ title: "Carpet Cleaning"
 description: "Eliminate Stains and Prolong Your Carpet’s Lifespan"
 subheading: "Nimbus provides total dirt and bacterial removal with our office carpet care package"
 image: /images/bg-hero.jpg
+caption: Book an ad-hock cleaner
 reasons:
   - icon: /template-images/smartphone.png
     heading: "Your Carpet Color Restored with No More Dirt"

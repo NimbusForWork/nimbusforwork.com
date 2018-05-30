@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html ⚡ lang="en" class="amp-border-box">
 <head>
@@ -8,32 +10,71 @@
 
 {{ partial "base/main-nav.html" . }}
 
-<div class="container  ">
-<div class="columns  ">
-
-  {{ range .Data.Pages }}
-  <div class="column col-4 ">
-  {{ partial "components/service-card.html" . }}
-    <!-- <a class="card" href="{{.Permalink}}">
-      <div class="card-image">
-        <figure class="image">
-          <img src="/rect{{.Params.image}}" alt="{{.Title}}">
-        </figure>
-      </div>
-      <div class="card-content">
-        <p class="title is-6">
-          {{.Title}}
-        </p>
-        <p class="summary">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </a> -->
+<div class="hero is-clear is-medium bg-right">
+  <div class="hero-text col-6 col-lg-12">
   </div>
-  {{ end }}
+</div>
 
+<div class="hero-nudge container grid-md text-center">
+  <h1>Everything you need to manage your office</h1>
+  <div class="columns ">
+    <div class="column col-3 col-sm-6">
+      <amp-img src="/template-images/phonebook.svg" alt="Get access to reliable vendors" class="" height="60" width="60" ></amp-img>
+      <h6>Quality</h6>
+      <p>Get access to reliable vendors</p>
+    </div>
+    <div class="column col-3  col-sm-6">
+      <amp-img src="/template-images/guarantee.svg" alt="Get access to reliable vendors" class="" height="60" width="60" ></amp-img>
+      <h6>Guarantee</h6>
+      <p>Receive a service guarantee for our work</p>
+    </div>
+    <div class="column col-3  col-sm-6">
+      <amp-img src="/template-images/invoice.svg" alt="Get access to reliable vendors" class="" height="60" width="60" ></amp-img>
+      <h6>Convenience</h6>
+      <p>Consolidate all your invoices</p>
+    </div>
+    <div class="column col-3  col-sm-6">
+      <amp-img src="/template-images/chat.svg" alt="Get access to reliable vendors" class="" height="60" width="60" ></amp-img>
+      <h6>Support</h6>
+      <p>Dedicated account managers to help anytime</p>
+    </div>
+  </div>
 </div>
+
+
+<div class="section">
+  <div class="container grid-md text-center ">
+    <div class="container">
+      <h2>Popular services</h2>
+      <div class="separator"></div>
+    </div>
+    <div class="columns ">
+
+      {{ range .Data.Pages }}
+      <div class="column col-4 col-sm-6">
+      {{ partial "components/service-card.html" . }}
+        <!-- <a class="card" href="{{.Permalink}}">
+          <div class="card-image">
+            <figure class="image">
+              <img src="/rect{{.Params.image}}" alt="{{.Title}}">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-6">
+              {{.Title}}
+            </p>
+            <p class="summary">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </a> -->
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
 </div>
+{{ partial "components/cta.html" . }}
 {{ partial "components/clients.html" . }}
 {{ partial "components/testimonials.html" . }}
 

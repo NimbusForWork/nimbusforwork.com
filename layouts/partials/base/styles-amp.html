@@ -46,6 +46,11 @@ h1.is-lg {
     ), url("/1000{{- .Params.image | default .Site.Params.heroImage -}}");
   background-size: cover;
 }
+.hero.is-clear {
+  background-image: url("/1000{{- .Params.image | default .Site.Params.heroImage -}}");
+}
+.hero.is-medium { min-height: 70vh; }
+.hero.bg-right { background-position-x: right; }
 .hero-text {
   color: white;
   padding: 20% 15px;
@@ -57,6 +62,21 @@ h1.is-lg {
 }
 .hero .btn {
   text-transform: uppercase;
+}
+.hero-nudge {
+  background: #fff;
+  margin-top: -60px;
+  padding: 10px;
+  border-radius: 4px;
+}
+@media (max-width:860px) {
+  .hero-nudge {
+    border-radius: 0px;
+  }
+}
+.hero-nudge h1 {
+  max-width: 400px;
+  margin: 50px auto;
 }
 .section {
   padding-top: 60px;
@@ -161,5 +181,13 @@ form.amp-form-submit-success > input {
 }
 .btn-link.btn-grey {
   color: #666;
+}
+.ServiceCard .card {
+  width: 70%;
+  margin: 0 auto 20px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+}
+a:hover {
+  text-decoration: none;
 }
 </style>
