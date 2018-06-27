@@ -49,3 +49,20 @@
 </div>
 
 <amp-analytics config="https://www.googletagmanager.com/amp.json?id={{.Site.Params.googleTagManager}}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+<!-- Facebook Pixel Analytics tracking -->
+<amp-analytics type="facebookpixel" id="facebook-pixel">
+    <script type="application/json">
+    {
+        "vars": {
+            "pixelId": "314554882356601"
+        },
+        "triggers": {
+            "trackPageview": {
+                "on": "visible",
+                "request": "pageview"
+            }
+        }
+    }
+    </script>
+</amp-analytics>
+<!-- End Facebook Pixel Analytics example -->
