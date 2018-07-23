@@ -1,0 +1,45 @@
+
+
+<!doctype html>
+<html ⚡ lang="en" class="amp-border-box">
+<head>
+{{ partial "base/header-amp.html" . }}
+{{ partial "base/styles-amp.html" . }}
+</head>
+<body class="">
+
+{{ partial "base/main-nav.html" . }}
+
+<div class="section is-blue">
+  <div class="container grid-lg ">
+    <h1>Jobs at Nimbus</h1>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container grid-lg ">
+
+    <div class="">
+
+      {{ range .Data.Pages }}
+      <div class="">
+        <h4 class="title is-6">
+          <a href="{{.Permalink}}">{{.Title}}</a>
+        </h4>
+        <p class="summary">
+          {{.Summary}}
+        </p>
+        </a>
+      </div>
+      <div class="separator"></div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
+
+{{ partial "base/footer.html" . }}
+
+
+</body>
+</html>

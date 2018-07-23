@@ -1,0 +1,36 @@
+
+
+<!doctype html>
+<html ⚡ lang="en" class="amp-border-box">
+<head>
+{{ partial "base/header-amp.html" . }}
+{{ partial "base/styles-amp.html" . }}
+</head>
+<body class="">
+
+{{ partial "base/main-nav.html" . }}
+
+
+<div class="section is-blue">
+  <div class="container grid-lg ">
+    <h1>{{.Title}}</h1>
+
+    <a href="{{.Params.link}}" class="btn btn-primary">APPLY NOW</a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container grid-lg ">
+
+    <div class="content">
+      {{.Content}}
+      <a href="{{.Params.link}}" class="btn btn-primary">APPLY NOW</a>
+    </div>
+  </div>
+</div>
+
+{{ partial "base/footer.html" . }}
+
+
+</body>
+</html>
