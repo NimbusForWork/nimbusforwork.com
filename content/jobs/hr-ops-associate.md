@@ -1,7 +1,7 @@
 ---
 title: "HR/Operations Associate"
 description: "HR Ops Associate - Nimbus for Work"
-link: https://careers.nimbusforwork.com/contact-us/
+link: https://goo.gl/forms/Pe3R6ve2qP8nQo6F2
 summary: >-
   As our HR-Ops Associate, you are mainly responsible for supporting the the HQ Team in planning good compensation schemes, manage an ever growing pipeline of workers interested in joining Nimbus, maintaining employment records as well as learn the basics of financial transactions by establishing accounts, posting transactions and ensuring legal requirements compliance.
 
