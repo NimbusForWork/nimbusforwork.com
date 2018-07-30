@@ -1,0 +1,108 @@
+<!doctype html>
+<html ⚡ lang="en" class="amp-border-box">
+<head>
+{{ partial "base/header-amp.html" . }}
+{{ partial "base/styles-amp.html" . }}
+</head>
+<body class="">
+
+{{ partial "base/main-nav.html" . }}
+<div class="hero">
+  <div class="hero-text col-6 col-lg-12">
+    <h1>{{- .Params.description | default .Site.Params.heroTitle -}}</h1>
+    <p>{{- .Params.subheading | default .Site.Params.heroSubtitle -}}</p>
+  </div>
+</div>
+
+
+<div class="section ">
+  <div class="container grid-sm text-center">
+    <h1>How it works</h1>
+    <div class="separator"></div>
+  </div>
+  <div class="container grid-md">
+    <div class="columns">
+      <div class="column text-center">
+        Some text here on how it works. 
+        <br>
+        1. Select the hours you want
+        <br>
+        2. we will hold those rates for you until the whole day is filled
+        <br>
+        3. reap the benefits of shared office buildings. Get a daily clean without having to pay full price
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section ">
+  <div class="container grid-sm text-center">
+    <h1>Rates</h1>
+    <div class="separator"></div>
+  </div>
+
+  <div class="container grid-lg">
+    <h5 class="text-center">Morning</h5>
+    <div class="columns">
+      {{ range .Params.morning }}
+        <div class="column col-sm-12">
+          <div class="card">
+            <div class="card-header text-center">
+              <div class="card-title h5">{{.start}}</div>
+              <div class="divider text-center" data-content="TO"></div>
+              <div class="card-title h5">{{.end}}</div>
+              <div class="card-subtitle text-gray">${{.rate}} <small>/hour</small></div>
+            </div>
+            <div class="card-footer">
+              <div class="btn-group btn-group-block">
+                {{ if eq .status "available" }}
+                    <button class="btn btn-primary">Book</button>
+                {{ else  }}
+                    <button class="btn disabled btn-error">Full</button>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="section container grid-lg">
+    <h5 class="text-center">Afternoon</h5>
+    <div class="columns">
+      {{ range .Params.afternoon }}
+        <div class="column col-sm-12">
+          <div class="card">
+            <div class="card-header text-center">
+              <div class="card-title h5">{{.start}}</div>
+              <div class="divider text-center" data-content="TO"></div>
+              <div class="card-title h5">{{.end}}</div>
+              <div class="card-subtitle text-gray">${{.rate}} <small>/hour</small></div>
+            </div>
+            <div class="card-footer">
+              <div class="btn-group btn-group-block">
+                {{ if eq .status "available" }}
+                    <button class="btn btn-primary">Book</button>
+                {{ else  }}
+                    <button class="btn disabled btn-error">Full</button>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+
+</div>
+
+{{ partial "components/guarantee.html" . }}
+{{ partial "components/why-choose-us.html" . }}
+{{ partial "components/testimonials.html" . }}
+{{ partial "components/clients.html" . }}
+{{ partial "base/footer.html" . }}
+
+</body>
+</html>
