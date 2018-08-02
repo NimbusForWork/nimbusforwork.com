@@ -11,4 +11,4 @@ Nimbus is on a mission to create happy workspace, one clean space at a time. We 
 
 We want to make local services great again by combining powerful technology with exceptional service. Most importantly, we believe in doing so, we will be able to provide good job opportunities for the people that matters most.
 
-Want to join the Nimbus crew? Become a cleaner!
+Interested? Join the Nimbus Crew by filling up our job application form here!
