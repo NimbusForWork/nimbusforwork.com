@@ -1,6 +1,6 @@
 ---
-title: "Become a cleaner"
-description: "Cleaner - Nimbus for Work"
+title: "Join the Nimbus Crew"
+description: "Join the Nimbus Crew - Nimbus for Work"
 link: https://goo.gl/forms/0tpWpxOMHXk8woac2
 summary: >-
   Want to join the Nimbus crew? Become a cleaner!
