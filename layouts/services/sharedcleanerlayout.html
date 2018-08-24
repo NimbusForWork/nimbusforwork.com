@@ -1,18 +1,14 @@
 <!doctype html>
-<html ⚡ lang="en" class="amp-border-box">
+<html lang="en" class="amp-border-box">
 <head>
 {{ partial "base/header-amp.html" . }}
 {{ partial "base/styles-amp.html" . }}
+
 </head>
 <body class="">
 
 {{ partial "base/main-nav.html" . }}
-<div class="hero">
-  <div class="hero-text col-6 col-lg-12">
-    <h1>{{- .Params.description | default .Site.Params.heroTitle -}}</h1>
-    <p>{{- .Params.subheading | default .Site.Params.heroSubtitle -}}</p>
-  </div>
-</div>
+
 
 
 <div class="section ">
@@ -40,6 +36,24 @@
     <h1>Rates</h1>
     <div class="separator"></div>
   </div>
+
+  
+
+  <ul class="step">
+    <li class="step-item">
+      <a href="#" class="tooltip" data-tooltip="Step 1">Choose location</a>
+    </li>
+    <li class="step-item active">
+      <a href="#" class="tooltip" data-tooltip="Step 2">Choose days</a>
+    </li>
+    <li class="step-item">
+      <a href="#" class="tooltip" data-tooltip="Step 3">Choose hours</a>
+    </li>
+    <li class="step-item">
+      <a href="#" class="tooltip" data-tooltip="Step 4">Review</a>
+    </li>
+  </ul>
+  
 
   <div class="container grid-lg">
     <h5 class="text-center">Morning</h5>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Nimbus Ad-hoc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <style>
+  .navbar { 
+    margin-bottom: 50px; 
+  }
+  .container {
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+  }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <section class="navbar-section">
+      <a href="#" class="btn btn-link">Link</a>
+    </section>
+    <section class="navbar-center">
+      <img class="brand-logo" src="/logo-menu.svg" alt="Nimbus" width="112" height="50" />
+    </section>
+    <section class="navbar-section">
+      <a href="#" class="btn btn-link">Link</a>
+    </section>
+  </header>
+
+  Drop us a note for customised hours and rates (including off-hours).
+  -sepcify what the 50 mins can do - trash collection, basic dusting, cleaning of tables, rearranging meeting room furniture
+  - add in How it works
+
+  * estimated timing
+  - vacumming < 1000 - 30mins / 15 min increment
+  - trash hauling < 1000 = 20 mins / 10 min increment
+  - dusting = 20 mins / 15 min increment
+  - cleaning tables = 20 mins / 15 min increment
+  - meeting rooms = 10 mins / 10 min increment
+  
+
+
+  <div id="app">
+    
+
+    <div class="container grid-lg">
+      <h2>How it works</h2>
+
+    </div>
+
+    <div class="container grid-lg">
+      <h2>Make a request</h2>
+      <ul class="step">
+        <li class="step-item" :class="{ active: (progress === 1) }" @click="() => {progress = 1}">
+          <a href="#" class="tooltip" data-tooltip="Step 1">Choose location</a>
+        </li>
+        <li class="step-item" :class="{ active: (progress === 2) }" @click="() => {progress = 2}">
+          <a href="#" class="tooltip" data-tooltip="Step 2">Choose hours</a>
+        </li>
+        <li class="step-item" :class="{ active: (progress === 3) }" @click="() => {progress = 3}">
+          <a href="#" class="tooltip" data-tooltip="Step 3">Choose days</a>
+        </li>
+        <li class="step-item" :class="{ active: (progress === 4) }" @click="() => {progress = 4}">
+          <a href="#" class="tooltip" data-tooltip="Step 4">Review</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="container grid-lg" v-show="progress === 1">
+      <h3>Location</h3>
+
+      <div class="container" v-for="location in locations" :key="location.name">
+        <a class="card" href="#" @click="() => {progress = 2}">
+          <div class="card-header">
+            <div class="card-title h5">{{location.name}}</div>
+            <div class="card-subtitle text-gray">{{location.address}}</div>
+          </div>
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="container grid-lg" v-show="progress === 2">
+      <h3>Hours</h3>
+
+      <h5>Morning</h5>
+      <div class="columns">
+        <div class="column col-sm-12" v-for="hour in morning" :key="hour.start">
+          <div class="card">
+            <div class="card-header text-center">
+              <div class="card-title h5">{{hour.start}}</div>
+              <div class="divider text-center" data-content="TO"></div>
+              <div class="card-title h5">{{hour.end}}</div>
+              <div class="card-subtitle text-gray">${{hour.rate}}
+                <small>/hour</small>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="btn-group btn-group-block">
+                <button class="btn" v-bind:class="{'btn-primary': isHourSelected(hour.start)}" @click="toggleHour(hour.start)">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5>Afternoon</h5>
+      <div class="columns">
+        <div class="column col-sm-12" v-for="hour in afternoon" :key="hour.start">
+          <div class="card">
+            <div class="card-header text-center">
+              <div class="card-title h5">{{hour.start}}</div>
+              <div class="divider text-center" data-content="TO"></div>
+              <div class="card-title h5">{{hour.end}}</div>
+              <div class="card-subtitle text-gray">${{hour.rate}}
+                <small>/hour</small>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="btn-group btn-group-block">
+                <button class="btn" v-bind:class="{'btn-primary': isHourSelected(hour.start)}" @click="toggleHour(hour.start)">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container grid-lg" v-show="progress === 3">
+      <h3>Days</h3>
+
+      <div class="columns">
+        <div class="column col-sm-12" v-for="day in days" :key="day">
+          <div class="card">
+            <div class="card-header text-center">
+              <div class="card-title h5">{{day}}</div>
+            </div>
+            <div class="card-footer">
+              <div class="btn-group btn-group-block">
+                <button class="btn">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container grid-lg" v-show="progress === 4">
+      <h3>Review</h3>
+
+      <div class="form-group">
+        <label class="form-label" for="input-example-1">Name</label>
+        <input class="form-input" type="text" id="input-example-1" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="input-example-1">Email</label>
+        <input class="form-input" type="text" id="input-example-1" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="input-example-1">Phone</label>
+        <input class="form-input" type="text" id="input-example-1" placeholder="Phone">
+      </div>
+      <button class="btn btn-primary">Submit</button>
+    </div>
+
+  </div>
+  
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        progress: 1,
+        locations: [
+          { name: 'Suntech 1', address: 'Lorem ipsum address' },
+          { name: 'Suntech 2', address: 'Lorem ipsum address' },
+          { name: 'Suntech 3', address: 'Lorem ipsum address' },
+        ],
+        hours: [
+          { start: 700, end: 750, rate: 25 },
+          { start: 800, end: 850, rate: 25 },
+          { start: 900, end: 950, rate: 25 },
+          { start: 1000, end: 1050, rate: 22 },
+          { start: 1100, end: 1150, rate: 22 },
+          { start: 1200, end: 1250, rate: 22 },
+          { start: 1300, end: 1350, rate: 22 },
+          { start: 1400, end: 1450, rate: 25 },
+          { start: 1500, end: 1550, rate: 25 },
+          { start: 1600, end: 1650, rate: 25 },
+        ],
+        days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        selectedHours: []
+      },
+      computed: {
+        morning: function () {
+          return this.hours.filter(x => (x.start < 1200))
+        },
+        afternoon: function () {
+          return this.hours.filter(x => (x.start >= 1200))
+        },
+      },
+      methods: {
+        isHourSelected: function (hour) {
+          return this.selectedHours.indexOf(hour) >= 0
+        },
+        toggleHour: function (hour) {
+          var index = this.selectedHours.indexOf(hour)
+          if (index === -1) this.selectedHours.push(hour)
+          else this.selectedHours.splice(index, 1)
+        }
+      }
+    })
+  </script>
+
+</body>
+</html>

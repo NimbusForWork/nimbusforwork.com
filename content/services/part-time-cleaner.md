@@ -1,6 +1,7 @@
 ---
 title: Special Offer
 description: Special Offer
+noamp: true
 layout: sharedcleanerlayout
 subheading: >-
   For a limited time we are offering special rates for Suntec Tower

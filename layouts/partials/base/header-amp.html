@@ -7,7 +7,9 @@
 <title>{{- .Title | default .Site.Title -}}</title>
 <meta name="description" content="{{- .Params.blurb | default .Site.Params.SiteDescription -}}">
 
-<link rel="amphtml" href="https://amp.nimbusforwork.com{{ (.Permalink | relURL) }}">
+{{ if (not (isset .Params "noamp")) }}
+  <link rel="amphtml" href="https://amp.nimbusforwork.com{{ (.Permalink | relURL) }}">
+{{ end }}
 <link rel="canonical" href="{{.Permalink}}">
 
 <link rel="preconnect" href="{{ .Site.BaseURL }}">
@@ -16,7 +18,7 @@
 <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
 
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 <script type="application/ld+json">
