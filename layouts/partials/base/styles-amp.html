@@ -39,7 +39,7 @@ h1.is-lg {
   margin-bottom: 2rem;
 }
 .hero {
-  min-height: 60vh;
+  min-height: 80vh;
   max-height: 80vh;
   overflow: hidden;
   background-image: linear-gradient(
@@ -47,6 +47,8 @@ h1.is-lg {
       rgba(0, 0, 0, 0.4)
     ), url("/1000{{- .Params.image | default .Site.Params.heroImage -}}");
   background-size: cover;
+  display: flex;
+  align-items: center;
 }
 .hero.is-clear {
   background-image: url("/1000{{- .Params.image | default .Site.Params.heroImage -}}");
@@ -55,7 +57,6 @@ h1.is-lg {
 .hero.bg-right { background-position-x: right; }
 .hero-text {
   color: white;
-  padding: 20% 15px;
   font-size: 1rem;
   text-shadow: 0 4px 6px rgba(50, 50, 0, 0.11);
 }
