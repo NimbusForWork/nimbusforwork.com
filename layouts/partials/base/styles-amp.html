@@ -42,10 +42,11 @@ h1.is-lg {
   min-height: 80vh;
   max-height: 80vh;
   overflow: hidden;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
-    ), url("/1000{{- .Params.image | default .Site.Params.heroImage -}}");
+    ), url("/1000{{- .Params.image | default .Site.Params.heroImage -}}"); */
+  background-image: url("/1000{{- .Params.image | default .Site.Params.heroImage -}}");
   background-size: cover;
   display: flex;
   align-items: center;
