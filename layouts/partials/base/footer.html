@@ -60,7 +60,15 @@
             "trackPageview": {
                 "on": "visible",
                 "request": "pageview"
-            }
+            },
+            "trackEvent": {
+               "on": "click",
+               "selector": "#form-submit-button",
+               "request": "event",
+               "vars": {
+                 "eventName": "Submit Form"
+               }
+             }
         }
     }
     </script>
