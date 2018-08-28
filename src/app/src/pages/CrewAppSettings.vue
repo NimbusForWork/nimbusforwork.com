@@ -1,12 +1,12 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ $route.params.userId }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'CrewAppSettings',
   created () {
     var self = this
     document.addEventListener('message', function (message) {
@@ -15,7 +15,7 @@ export default {
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js Ap'
+      msg: 'Crew Settings'
     }
   }
 }
