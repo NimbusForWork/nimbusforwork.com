@@ -10,7 +10,11 @@ on windows WSL, after `npm install`, run `execstack -c node_modules/sharp/vendor
 
 ### JS and CSS
 
-Lives in `/src`. You should open another terminal and run `npm start`
+Lives in `/src`. You should open another terminal and run `npm start`. This will build all the static assets for the site
+
+### Vue app
+
+There is a Vue app in `./src/app`. Running `npm run build` in this will build the app into `./static/app`, which is available on https://nimbusforwork.com/app
 
 ## Development
 
