@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import NotFoundComponent from '@/components/NotFoundComponent'
 import CrewAppSettings from '@/pages/CrewAppSettings'
 
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history',
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -18,6 +19,7 @@ export default new Router({
       name: 'CrewAppSettings',
       component: CrewAppSettings,
       props: { default: true }
-    }
+    },
+    { path: '*', component: NotFoundComponent }
   ]
 })
