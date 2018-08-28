@@ -14,7 +14,7 @@ Lives in `/src`. You should open another terminal and run `npm start`. This will
 
 ### Vue app
 
-There is a Vue app in `./src/app`. Running `npm run build` in this will build the app into `./static/app`, which is available on https://nimbusforwork.com/app
+There is a Vue app in `./src/app`. Running `npm run build` in this will build the app into `./static/app`, which is available on https://nimbusforwork.com/app. This should be committed into version control.
 
 ## Development
 
