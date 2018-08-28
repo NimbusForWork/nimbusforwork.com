@@ -6,12 +6,6 @@
   HUGO_VERSION = "0.33"
   HUGO_ENV = "production"
 
-[[redirects]]
-  from = "/app/*"
-  to = "/app/index.html"
-  status = 200
-  force = true # Ensure that we always redirect
-
 [[headers]]
   for = "/*"
   [headers.values]
