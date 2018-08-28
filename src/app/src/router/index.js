@@ -10,12 +10,12 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/app/',
       name: 'HelloWorld',
       component: HelloWorld
     },
     {
-      path: '/crew/settings/:userId',
+      path: '/app/crew/settings/:userId',
       name: 'CrewAppSettings',
       component: CrewAppSettings,
       props: { default: true }
