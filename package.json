@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/gulp",
-    "start:functions": "netlify-lambda serve src/lambda",
-    "build:functions": "netlify-lambda build src/lambda",
-    "serve:functions": "netlify-lambda serve src/lambda",
-    "images": "node ./optimiseImages.js",
-    "commit": "git add . && git commit"
+    "images": "node ./optimiseImages.js"
   },
   "author": "",
   "license": "ISC",
